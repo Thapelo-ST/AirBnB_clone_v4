@@ -22,6 +22,7 @@ def close_db(error):
 @app.route('/0-hbnb/', strict_slashes=False)
 def hbnb():
     """ HBNB is alive! """
+    cache_id = str(uuid.uuid4())
     states = storage.all(State).values()
     states = sorted(states, key=lambda k: k.name)
     st_ct = []
@@ -44,4 +45,4 @@ def hbnb():
 
 if __name__ == "__main__":
     """ Main Function """
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=5000)
