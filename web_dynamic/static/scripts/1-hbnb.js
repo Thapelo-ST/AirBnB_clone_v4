@@ -14,7 +14,7 @@ $(document).ready(function () {
 			delete selectedAmenities[amenityId];
 		}
 
-		// upfate the h4 tag
+		// update the h4 tag
 		var amenitiesList = Object.values(selectedAmenities).join(', ');
 		$('.filters h4').text(amenitiesList);
 	});
